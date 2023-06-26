@@ -13,11 +13,11 @@ class Rice {
         self.salt = salt
     }
 
-    private init(readyToUsePacket: Gram) {
-        rice = readyToUsePacket * 0.6
-        oil = readyToUsePacket * 0.1
-        water = readyToUsePacket * 0.38
-        salt = readyToUsePacket * 0.02
+    private init(readyToEatPacket: Gram) {
+        rice = readyToEatPacket * 0.6
+        oil = readyToEatPacket * 0.1
+        water = readyToEatPacket * 0.38
+        salt = readyToEatPacket * 0.02
     }
 
     class RiceFactory {
@@ -25,8 +25,8 @@ class Rice {
             return Rice(rice: rice, oil: oil, water: water, salt: salt)
         }
 
-        static func createFromPackagedRice(readyToUsePacket: Gram) -> Rice {
-            return Rice(readyToUsePacket: readyToUsePacket)
+        static func createFromPackagedRice(readyToEatPacket: Gram) -> Rice {
+            return Rice(readyToEatPacket: readyToEatPacket)
         }
     }
 }
